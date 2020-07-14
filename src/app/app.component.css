@@ -1,0 +1,28 @@
+h1 {
+  font-family: Arial;
+  font-size: 200%;
+  color: black;
+  text-align: center;
+}
+
+
+
+.task li {
+  font-size: 150%;
+  position: relative;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin: 5px;
+  width: 20%;
+  text-indent: 10px;
+}
+
+.task li:hover {
+  background-color: lightskyblue;
+}
+
+.button{
+
+}
+
+

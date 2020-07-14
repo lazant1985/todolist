@@ -1,0 +1,21 @@
+div{
+  text-align: center;
+}
+
+button {
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 100%;
+}
+
+input {
+  font-size: 100%;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: antiquewhite;
+}
+
+
+
