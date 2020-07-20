@@ -1,3 +1,4 @@
+
 h1 {
   font-family: Arial;
   font-size: 200%;
@@ -5,24 +6,64 @@ h1 {
   text-align: center;
 }
 
-
-
-.task li {
-  font-size: 150%;
-  position: relative;
-  background-color: lightgray;
-  border-radius: 4px;
-  margin: 5px;
-  width: 20%;
-  text-indent: 10px;
+.parent{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.task li:hover {
+.task {
+  display: flex;
+  justify-content: space-between;
+  font-size: 200%;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.task:hover {
   background-color: lightskyblue;
 }
 
-.button{
-
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 200%;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
+
+.person:hover {
+  background-color: lightskyblue;
+}
+
+.button {
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: red;
+}
+
+.childTask {
+  width: 25%;
+}
+
+.childPerson {
+  width: 25%;
+}
+
+.todo-checkbox{
+  margin-right: 5px;
+}
+
+.icons{
+  font-size: 14px;
+}
+
 
 

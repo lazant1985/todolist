@@ -1,13 +1,32 @@
+
 <h1>{{title}}</h1>
 
-<app-to-do-tasks (newTaskEvent)="addTask($event)"></app-to-do-tasks>
+<div class="parent">
+  <div class="childTask">
+    <app-to-do-tasks (newTaskEvent)="addTask($event)"></app-to-do-tasks>
+      <div class="task" *ngFor="let task of tasks; let index = index">
+        <input class="todo-checkbox" type="checkbox">
+        <span>{{task}}</span>
+        <button (click)="deleteTask(index)" class="button">
+          <i class="material-icons icons">clear</i>
+        </button>
+      </div>
+  </div>
 
-<div>
-  <ol class="task">
-    <li *ngFor="let task of tasks; let index = index">
-      <span>{{task}}</span>
-      <button (click)="deleteTask(index)" class="button">Delete</button>
-    </li>
-  </ol>
+  <div class="childPerson">
+    <app-to-do-persons (newPersonEvent)="addPerson($event)"></app-to-do-persons>
+      <div class="person" *ngFor="let person of persons; let index = index">
+        <input class="todo-checkbox" type="checkbox">
+        <span>{{person}}</span>
+        <button (click)="deletePerson(index)" class="button">
+          <i class="material-icons icons">clear</i>
+        </button>
+      </div>
+  </div>
 </div>
+
+
+
+
+
 
