@@ -17,7 +17,7 @@ export class ToDoTasksComponent implements OnInit {
   addNewTask(value: string){
     this.newTaskEvent.emit(value);
 
-}
+  }
 
 
 
