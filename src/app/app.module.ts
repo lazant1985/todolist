@@ -6,18 +6,22 @@ import {FormsModule} from '@angular/forms';
 import { ToDoTasksComponent } from './to-do-tasks/to-do-tasks.component';
 import { ToDoPersonsComponent } from './to-do-persons/to-do-persons.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SelectListComponent } from './select-list/select-list.component';
+import { MatSelectModule} from '@angular/core/material/select';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoTasksComponent,
-    ToDoPersonsComponent
+    ToDoPersonsComponent,
+    SelectListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

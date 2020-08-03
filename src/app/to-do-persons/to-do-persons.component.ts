@@ -5,14 +5,13 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   templateUrl: './to-do-persons.component.html',
   styleUrls: ['./to-do-persons.component.css']
 })
-export class ToDoPersonsComponent implements OnInit {
+export class ToDoPersonsComponent  {
+
+  inputPerson = '';
+
 
   @Output() newPersonEvent = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   addNewPerson(value: string){
     this.newPersonEvent.emit(value);

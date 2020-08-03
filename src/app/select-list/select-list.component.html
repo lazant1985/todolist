@@ -1,0 +1,32 @@
+<div class="position-select">
+
+  <h2>ToDoList</h2>
+  <div class="select">
+    <div>
+      <h4>Tasks</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose Task</mat-label>
+        <mat-select  [(ngModel)]="chooseTask">
+          <mat-option></mat-option>
+          <mat-option [value]="arTask" *ngFor="let arTask of arTasks">{{ arTask.name }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <h4>Person</h4>
+      <mat-form-field appearance="fill">
+        <mat-label>Choose Person</mat-label>
+        <mat-select  [(ngModel)]="choosePerson">
+          <mat-option></mat-option>
+          <mat-option [value]="arPerson" *ngFor="let arPerson of arPersons">{{ arPerson.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <button  [disabled]="(!chooseTask || !choosePerson)" (click)="addItem()">Add List</button>
+    </div>
+  </div>
+
+
+
+</div>

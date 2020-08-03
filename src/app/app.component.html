@@ -4,24 +4,35 @@
 <div class="parent">
   <div class="childTask">
     <app-to-do-tasks (newTaskEvent)="addTask($event)"></app-to-do-tasks>
-      <div class="task" *ngFor="let task of tasks; let index = index">
-        <input class="todo-checkbox" type="checkbox">
-        <span>{{task}}</span>
-        <button (click)="deleteTask(index)" class="button">
-          <i class="material-icons icons">clear</i>
-        </button>
-      </div>
+    <div class="task" *ngFor="let task of tasks; let index = index">
+      <input class="todo-checkbox" type="checkbox">
+      <span class="check-text">{{task.name}}</span>
+      <button (click)="deleteTask(task.id)" class="button">
+        <i class="material-icons icons">clear</i>
+      </button>
+    </div>
   </div>
 
   <div class="childPerson">
     <app-to-do-persons (newPersonEvent)="addPerson($event)"></app-to-do-persons>
-      <div class="person" *ngFor="let person of persons; let index = index">
-        <input class="todo-checkbox" type="checkbox">
-        <span>{{person}}</span>
-        <button (click)="deletePerson(index)" class="button">
-          <i class="material-icons icons">clear</i>
-        </button>
-      </div>
+    <div class="person" *ngFor="let person of persons; let index = index">
+      <input class="todo-checkbox" type="checkbox">
+      <span>{{person.name}}</span>
+      <button (click)="deletePerson(person.id)" class="button">
+        <i class="material-icons icons">clear</i>
+      </button>
+    </div>
+  </div>
+
+  <div class="childSelect">
+    <app-select-list [arTasks]="tasks" [arPersons]="persons" [arList]="lists"></app-select-list>
+    <div *ngFor="let list of lists; let index = index">
+      <span>{{getTaskNameById(list.taskId)}} </span>
+      <span>{{getPersonNameById(list.personId)}}</span>
+      <button (click)="deleteList(index)">
+        <i class="material-icons icons">clear</i>
+      </button>
+    </div>
   </div>
 </div>
 

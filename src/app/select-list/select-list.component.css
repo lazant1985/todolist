@@ -1,0 +1,16 @@
+.position-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div .select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h4 {
+  text-align: center;
+}
