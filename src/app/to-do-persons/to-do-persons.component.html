@@ -2,8 +2,8 @@
   <h2>Person</h2>
 
   <div class="text-position">
-    <input #newPerson type="text" placeholder="add person">
-    <button (click)="addNewPerson(newPerson.value)">Add Person</button>
+    <input #newPerson type="text" placeholder="add person" [(ngModel)]="inputPerson">
+    <button [disabled]="inputPerson === ''" (click)="addNewPerson(newPerson.value)">Add Person</button>
   </div>
 
 </div>

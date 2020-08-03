@@ -55,6 +55,11 @@ h1 {
 
 .childPerson {
   width: 25%;
+  order: 1;
+}
+
+.childSelect {
+  width: 30%;
 }
 
 .todo-checkbox{
@@ -64,6 +69,9 @@ h1 {
 .icons{
   font-size: 14px;
 }
+
+
+
 
 
 

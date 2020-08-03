@@ -22,4 +22,27 @@ button:hover {
   background-color: antiquewhite;
 }
 
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 200%;
+  background-color: lightgray;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.person:hover {
+  background-color: lightskyblue;
+}
+
+.button {
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.button:hover {
+  background-color: red;
+}
+
 

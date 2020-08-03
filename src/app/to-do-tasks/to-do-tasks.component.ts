@@ -7,6 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class ToDoTasksComponent implements OnInit {
 
+  inputTask = '';
+
+
   @Output() newTaskEvent = new EventEmitter();
 
   constructor() { }
@@ -16,7 +19,6 @@ export class ToDoTasksComponent implements OnInit {
 
   addNewTask(value: string){
     this.newTaskEvent.emit(value);
-
   }
 
 
