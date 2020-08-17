@@ -4,10 +4,10 @@
 <div class="parent">
   <div class="childTask">
     <app-to-do-tasks (newTaskEvent)="addTask($event)"></app-to-do-tasks>
-    <div class="task" *ngFor="let task of tasks; let index = index">
-      <input class="todo-checkbox" type="checkbox">
+    <div class="task" *ngFor="let task of tasks; let index = index" >
+      <input class="todo-checkbox" type="checkbox" >
       <span class="check-text">{{task.name}}</span>
-      <button (click)="deleteTask(task.id)" class="button">
+      <button (click)="openDialogTask(task.id)" class="button">
         <i class="material-icons icons">clear</i>
       </button>
     </div>
@@ -18,7 +18,7 @@
     <div class="person" *ngFor="let person of persons; let index = index">
       <input class="todo-checkbox" type="checkbox">
       <span>{{person.name}}</span>
-      <button (click)="deletePerson(person.id)" class="button">
+      <button (click)="openDialogPerson(person.id)" class="button">
         <i class="material-icons icons">clear</i>
       </button>
     </div>
@@ -29,13 +29,22 @@
     <div *ngFor="let list of lists; let index = index">
       <span>{{getTaskNameById(list.taskId)}} </span>
       <span>{{getPersonNameById(list.personId)}}</span>
-      <button (click)="deleteList(index)">
+      <button (click)="openDialogList(index)">
         <i class="material-icons icons">clear</i>
       </button>
     </div>
   </div>
 </div>
 
+<div>
+  <button (click)="serverRequestNews()">RequestNews</button>
+  <button (click)="serverRequestNBA()">RequestNBA</button>
+  <button (click)="GetApiServer()">GetApi</button>
+  <button (click)="GetApiValues()">GetValue</button>
+  <button (click)="PostApiValues()">PostApi</button>
+  <button (click)="PutApiValues()">PutApi</button>
+  <button (click)="DeleteApiValues()">DeleteApi</button>
+</div>
 
 
 
