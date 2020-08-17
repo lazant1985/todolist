@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Task} from '../models/task.model';
 import {Person} from '../models/person.model';
 import {ToDoList} from '../models/todolist.model';

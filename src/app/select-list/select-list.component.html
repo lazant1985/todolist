@@ -2,7 +2,7 @@
 
   <h2>ToDoList</h2>
   <div class="select">
-    <div>
+    <div mat-dialog-content>
       <h4>Tasks</h4>
       <mat-form-field appearance="fill">
         <mat-label>Choose Task</mat-label>
@@ -23,7 +23,7 @@
       </mat-form-field>
     </div>
     <div>
-      <button  [disabled]="(!chooseTask || !choosePerson)" (click)="addItem()">Add List</button>
+      <button  [disabled]="(!chooseTask || !choosePerson) || !arTasks.length || !arPersons.length" (click)="addItem()">Add List</button>
     </div>
   </div>
 

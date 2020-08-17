@@ -1,10 +1,8 @@
 <div class="position">
-
   <h2>Tasks</h2>
-
   <div class="text-position">
     <input #newTask type="text" placeholder="add tasks" [(ngModel)]="inputTask">
-    <button [disabled]="inputTask === ''" (click)="addNewTask(newTask.value)">Add Task</button>
+    <button  [disabled]="inputTask === ''" (click)="addNewTask(newTask.value)">Add Task</button>
   </div>
 
 </div>
